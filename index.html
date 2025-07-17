@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Usuario con Cropper</title>
+
+  <!-- Cropper.js CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Registro de Usuario</h1>
+
+  <form id="formUsuario">
+    <!-- Campo nombre -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <!-- Campo correo -->
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <!-- Campo foto -->
+    <label for="foto">Foto de Perfil:</label>
+    <input type="file" id="foto" name="foto" accept="image/*" required>
+
+    <!-- Vista previa de la foto -->
+    <div>
+      <img id="preview" src="" alt="Vista previa" class="foto-preview">
+    </div>
+
+    <!-- Botón para abrir editor de foto -->
+    <button type="button" id="editarFoto">Editar Foto</button>
+
+    <!-- Botón para guardar formulario -->
+    <button type="submit">Guardar</button>
+  </form>
+
+  <!-- Modal de edición -->
+  <div id="modalEditor" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="cropper-container">
+        <img id="imageCropper" src="" alt="Editar imagen">
+      </div>
+
+      <label for="filtro">Filtro:</label>
+      <select id="filtro">
+        <option value="none">Ninguno</option>
+        <option value="grayscale(100%)">Gris</option>
+        <option value="sepia(100%)">Sepia</option>
+        <option value="brightness(150%)">Brillo +50%</option>
+        <option value="contrast(150%)">Contraste +50%</option>
+      </select>
+
+      <button id="aplicarCambios">Aplicar Cambios</button>
+    </div>
+  </div>
+    <p><a href="perfil.html">Ir al Perfil</a></p>
+
+  <!-- Cropper.js JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

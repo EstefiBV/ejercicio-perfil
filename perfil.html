@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Perfil de Usuario</h1>
+
+  <!-- Div donde se mostrarán los datos -->
+  <div id="perfilUsuario"></div>
+
+  <p><a href="index.html">Volver al Formulario</a></p>
+  <p><a href="contacto.html">Contactenos</a></p>
+
+
+  <script>
+    const perfilDiv = document.getElementById('perfilUsuario'); // Referencia al div
+    const usuarioGuardado = localStorage.getItem('usuario'); // Obtiene usuario de localStorage
+
+    if (usuarioGuardado) {
+      const usuario = JSON.parse(usuarioGuardado); // Convierte JSON a objeto
+
+      // Muestra foto con filtro y datos de usuario
+      perfilDiv.innerHTML = `
+        <img src="${usuario.foto}" class="foto-preview" style="filter: ${usuario.filtro};">
+        <p><strong>Nombre:</strong> ${usuario.nombre}</p>
+        <p><strong>Correo:</strong> ${usuario.correo}</p>
+      `;
+    } else {
+      perfilDiv.innerHTML = '<p>No hay datos de usuario almacenados.</p>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Fondo general de la página de contacto */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Título centrado */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Formulario centrado con fondo blanco */
+form#formContacto {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto; /* Centrado horizontal */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Etiquetas de campos */
+label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Inputs y textarea uniformes */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+/* Botón enviar */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Hover en botón */
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Enlace de regreso */
+p a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
